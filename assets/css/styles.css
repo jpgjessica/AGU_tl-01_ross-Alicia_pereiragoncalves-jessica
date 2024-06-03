@@ -1,0 +1,141 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("./fonts/montserrat-variablefont_wght-webfont.woff") format("woff"),
+        url("./fonts/montserrat-variablefont_wght-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Montserrat_2";
+    src: url("./fonts/montserrat-italic-variablefont_wght-webfont.woff") format("woff"),
+        url("./fonts/montserrat-variablefont_wght-webfont.woff2") format("woff2");
+    font-style: italic;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #8dbfc0;
+    --color-secondary: #f9ac2c;
+    --color-tertiary: #ed8699;
+    --color-tertiary-var: #edc8b7;
+    --color-tertiary-trans: rgba(237, 200, 183, 0.5);
+    --color-white: #ffffff;
+    --color-white-trans: rgba(255, 255, 255, 0.8);
+    --color-black: #000000;
+    --color-gray: #a2a2a2;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-width: 100%;
+    overflow-x: hidden;
+}
+
+.background_img {
+    background-image: url("../img/bg/woman_01.png"), url("../img/bg/woman_02.png"), url("../img/bg/woman_03.png");
+    background-repeat: no-repeat;
+    background-position: bottom right, bottom left 6rem, bottom left;
+    background-size: 30%;
+}
+
+header {
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-gray);
+    box-shadow: 2px 2px 10px var(--color-gray);
+}
+
+h1 {
+    color: var(--color-primary);
+}
+
+h2 {
+    color: var(--color-gray);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+header p {
+    color: var(--color-gray);
+    margin: 0;
+    padding: 0;
+}
+
+.flex_container {
+    margin: 4rem 4rem 0 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: stretch;
+    align-content: center;
+    justify-items: center;
+    padding-bottom: 20rem;
+}
+
+.flex_enfant {
+    max-width: 40rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-white-trans);
+    border-radius: 1rem;
+    box-shadow: 2px 2px 10px var(--color-gray);
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+}
+
+.references {
+    font-size: .8rem;
+    text-align: left;
+}
+
+h3 {
+    text-align: center;
+}
+
+.footer_informations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    font-size: 0.8rem;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--color-primary);
+}
+
+.footer_informations p {
+    margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .flex_container {
+        flex-direction: row;
+    }
+
+    .background_img {
+        background-position: bottom right, bottom left 20rem, bottom left;
+        background-size: 20%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .background_img {
+        background-size: 10%;
+    }
+}
